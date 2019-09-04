@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="container mx-auto lg:flex lg:py-4">
+    {% set _logo = Image(theme.theme_mod('custom_logo')) %}
+        <figure class="custom-logo--wrapper">
+            <a href="{{ site.link }}">
+                <img src="{{ _logo.src('medium') }}" alt="{{ _logo.alt }}" class="custom-logo">
+            </a>
+        </figure>
+        <nav class="nav lg:ml-auto lg:flex lg:items-center">
+            {% for item in primaryMenu.items %}
+                <a
+                    class="menu-item lg:mr-8 {{ item.classes|join(' ') }}"
+                    href="{{ item.link }}" title="{{ item.title }}">
+                    {{ item.title }}
+                </a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>

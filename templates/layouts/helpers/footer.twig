@@ -1,0 +1,11 @@
+{% do fn('elementor_theme_do_location', 'footer_top') %}
+<footer class="bg-sky">
+    <nav class="container mx-auto flex flex-col items-center justify-center lg:flex-row lg:items-baseline lg:py-2 px-4 lg:px-0">
+        {% for item in footerMenu.items %}
+            <a href="{{ item.link }}" class="footer-menu-item text-white">{{ item.title }}</a> {% if not loop.last %}<span class="text-white hidden lg:inline">|</span>{% endif %}
+        {% endfor %}
+    </nav>
+</footer>
+
+<link rel="stylesheet" href="{{ theme.link }}/dist/main.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">

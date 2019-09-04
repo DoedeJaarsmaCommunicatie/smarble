@@ -5,7 +5,8 @@
         "timber/timber": "^1.10",
         "jjgrainger/posttypes": "^2.0",
         "htmlburger/carbon-fields": "^3.1",
-        "dusank/knapsack": "^10.0"
+        "dusank/knapsack": "^10.0",
+    "symfony/finder": "^4.3"
   },
   "require-dev": {
         "roave/security-advisories": "dev-master"
@@ -18,5 +19,9 @@
       "vendor/aristath/kirki/kirki.php",
       "src/app.php"
     ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
   }
 }
