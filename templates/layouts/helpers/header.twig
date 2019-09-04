@@ -1,12 +1,15 @@
 <header class="header">
-    <div class="container mx-auto lg:flex lg:py-4">
+    <div class="container mx-auto flex lg:py-4 px-4 lg:px-0">
     {% set _logo = Image(theme.theme_mod('custom_logo')) %}
         <figure class="custom-logo--wrapper">
             <a href="{{ site.link }}">
                 <img src="{{ _logo.src('medium') }}" alt="{{ _logo.alt }}" class="custom-logo">
             </a>
         </figure>
-        <nav class="nav lg:ml-auto lg:flex lg:items-center">
+        <button type="button" class="lg:hidden text-ocean js-open-menu ml-auto">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav lg:ml-auto flex flex-col lg:flex-row lg:items-center p-8">
             {% for item in primaryMenu.items %}
                 <a
                     class="menu-item lg:mr-8 {{ item.classes|join(' ') }}"
