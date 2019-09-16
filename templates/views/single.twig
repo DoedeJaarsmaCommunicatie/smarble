@@ -1,0 +1,13 @@
+{% extends 'layouts/app.twig' %}
+
+{% block content %}
+    <main class="container mx-auto lg:flex">
+        <aside class="lg:w-1/2 lg:pr-8">
+            <img src="{{ post.thumbnail('large') }}" />
+        </aside>
+        <section class="lg:w-1/2">
+            <h1>{{ post.title }}</h1>
+            {{ post.content }}
+        </section>
+    </main>
+{% endblock %}
