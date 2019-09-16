@@ -1,5 +1,5 @@
-<header class="header">
-    <div class="container mx-auto flex lg:py-4 px-4 lg:px-0">
+<header class="header border-b border-gray-300">
+    <div class="container mx-auto flex py-4 lg:py-4 px-4 lg:px-0 items-center">
     {% set _logo = Image(theme.theme_mod('custom_logo')) %}
         <figure class="custom-logo--wrapper">
             <a href="{{ site.link }}">
@@ -11,8 +11,7 @@
         </button>
         <nav class="nav lg:ml-auto flex flex-col lg:flex-row lg:items-center p-8">
             {% for item in primaryMenu.items %}
-                <a
-                    class="menu-item lg:mr-8 {{ item.classes|join(' ') }}"
+                <a class="menu-item lg:mr-8 uppercase {{ item.classes|join(' ') }}"
                     href="{{ item.link }}" title="{{ item.title }}">
                     {{ item.title }}
                 </a>

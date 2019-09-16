@@ -8,6 +8,9 @@ document.body.addEventListener('click', ev => {
     if (!menu.classList.contains('active'))
         return;
 
+    if (ev.target.classList.contains('js-open-menu'))
+        return;
+
     if (ev.target === menu || menu.contains(ev.target))
         return;
 
@@ -18,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
     delete Hammer.defaults.cssProps.userSelect;
     const button = document.querySelector('.js-open-menu')
     const menu = document.querySelector('.nav');
-    const hammer = new Hammer(document.body);
-
-    hammer.on('panleft', () => {
-        menu.classList.add('active');
-    })
+    // const hammer = new Hammer(document.body);
+    //
+    // hammer.on('panleft', () => {
+    //     menu.classList.add('active');
+    // })
 
     button.addEventListener('click', () => {
         menu.classList.add('active');
