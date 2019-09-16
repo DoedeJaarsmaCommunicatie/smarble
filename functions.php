@@ -4,6 +4,7 @@ use Timber\Timber;
 include_once get_stylesheet_directory() . '/vendor/autoload.php';
 
 add_theme_support('custom-logo');
+add_theme_support('post-thumbnails'); 
 
 $updater = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/DoedeJaarsmaCommunicatie/smarble',
